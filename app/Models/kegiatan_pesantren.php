@@ -19,6 +19,11 @@ class kegiatan_pesantren extends Model
     public function santris(){
         return $this->hasMany(santri::class);
     }
+    public function images()
+    {
+        return $this->morphToMany(image::class, 'imageable');
+    }
+
 
 
 }

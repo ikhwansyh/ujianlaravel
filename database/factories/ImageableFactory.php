@@ -25,10 +25,10 @@ class ImageableFactory extends Factory
         return [
             'image_id'=>image::all()->random()->id,
             'imageable_id'=>fake()->randomElement([
-                santri::all()->random(),
-                pengajar::all()->random(),
-                kegiatan_pesantren::all()->random(),
-                kelas::all()->random(),
+                santri::all()->random()->id,
+                pengajar::all()->random()->id,
+                kegiatan_pesantren::all()->random()->id,
+                kelas::all()->random()->id,
             ]),
             'imageable_type'=>fake()->randomElement([
                 santri::class,

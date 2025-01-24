@@ -28,4 +28,9 @@ class kelas extends Model
     public function mapels(){
         return $this->hasMany(mapel::class);
     }
+
+    public function images()
+    {
+        return $this->morphToMany(image::class, 'imageable');
+    }
 }

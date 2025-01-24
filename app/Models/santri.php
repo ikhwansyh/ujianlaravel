@@ -30,4 +30,10 @@ class santri extends Model
     public function kegiatan(){
         return $this->belongsTo(kegiatan_pesantren::class);
     }
+
+    public function images()
+    {
+        return $this->morphToMany(image::class, 'imageable');
+    }
+
 }

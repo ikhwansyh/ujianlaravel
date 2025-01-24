@@ -21,4 +21,9 @@ class pengajar extends Model
     public function mapel(){
         return $this->hasMany(mapel::class);
     }
+
+    public function images()
+    {
+        return $this->morphToMany(image::class, 'imageable');
+    }
 }
